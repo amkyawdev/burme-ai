@@ -1,0 +1,12 @@
+# Local Development Dependencies
+# Install with: pip install -r requirements-dev.txt
+
+-r requirements.txt
+
+# AI Libraries (for local development only)
+openai
+diffusers
+torch
+transformers
+accelerate
+soundfile

@@ -3,6 +3,9 @@
 name = "ai"
 compatibility_date = "2024-04-16"
 
+# Python version for Cloudflare Pages
+python_version = "3.13"
+
 # Build settings for Cloudflare Pages (Python)
 [build]
 command = "pip install -r requirements.txt"
