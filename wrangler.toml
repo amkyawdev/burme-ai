@@ -1,9 +1,8 @@
-# Cloudflare Workers Configuration
 name = "special-ai"
 compatibility_date = "2024-04-16"
 
+[site]
+bucket = "./public"
+
 [env.production]
 name = "special-ai-prod"
-
-# Main worker script
-main = "workers/index.js"

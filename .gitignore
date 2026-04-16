@@ -52,3 +52,6 @@ htmlcov/
 
 # Cache
 .cache/.env
+
+# Cloudflare
+public/
