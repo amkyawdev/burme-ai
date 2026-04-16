@@ -4,3 +4,6 @@ compatibility_date = "2024-04-16"
 
 [env.production]
 name = "special-ai-prod"
+
+# Main worker script
+main = "workers/index.js"
