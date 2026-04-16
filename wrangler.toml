@@ -1,8 +1,4 @@
 name = "special-ai"
 compatibility_date = "2024-04-16"
 
-[site]
-bucket = "./public"
-
-[env.production]
-name = "special-ai-prod"
+main = "workers/index.js"
