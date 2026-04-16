@@ -1,0 +1,6 @@
+# Cloudflare Workers Configuration
+name = "burme-ai-api"
+compatibility_date = "2024-04-16"
+
+[env.production]
+name = "burme-ai-api-prod"

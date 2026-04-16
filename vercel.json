@@ -1,0 +1,9 @@
+# Vercel configuration for AI Platform
+
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null,
+  "devCommand": null
+}
