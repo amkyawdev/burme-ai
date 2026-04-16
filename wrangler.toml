@@ -1,6 +1,6 @@
 # Cloudflare Workers/Pages Configuration
 
-name = "burme-ai"
+name = "ai"
 compatibility_date = "2024-04-16"
 
 # Build settings for Cloudflare Pages (Python)
