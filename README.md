@@ -191,6 +191,27 @@ ruff format .
 ```
 
 ---
+## Cloudflare Deployment
+
+### Workers (Serverless API)
+
+Deploy AI APIs to Cloudflare Workers:
+
+```bash
+npm install -g wrangler
+wrangler login
+wrangler secret put CLOUDFLARE_API_TOKEN
+wrangler secret put CLOUDFLARE_ACCOUNT_ID
+wrangler deploy
+```
+
+See `/workers/README.md` for details.
+
+### Pages
+Deploy frontend to Cloudflare Pages.
+
+### GitHub Actions
+Add secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
 
 ## 📄 License
 

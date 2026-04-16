@@ -1,0 +1,24 @@
+# Cloudflare Workers/Pages Configuration
+
+name = "burme-ai"
+compatibility_date = "2024-04-16"
+
+[site]
+bucket = "./dist"
+
+[env.production]
+name = "burme-ai-prod"
+
+[[env.production.site]]
+bucket = "./dist"
+
+# CORS settings
+[headers]
+  [headers.content-security-policy]
+    default-src = "'self'"
+    script-src = "'self' 'unsafe-inline'"
+    style-src = "'self' 'unsafe-inline'"
+    img-src = "'self' data: https:"
+
+[[trigger]]
+route = { pattern = "burme-ai.*", zone_name = "" }
