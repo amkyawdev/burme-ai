@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">About {{ app_name }}</h1>
+        <p class="page-subtitle">Learn more about our AI-powered platform</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <h2>What is Burme AI?</h2>
+        <p>{{ app_name }} is a comprehensive AI-powered platform that provides various tools for creative and development tasks. Powered by cutting-edge AI models including Llama-3, Stable Diffusion, and more.</p>
+        
+        <h3>Our Mission</h3>
+        <p>To democratize AI technology and make it accessible to everyone through an intuitive, user-friendly interface.</p>
+        
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Backend:</strong> FastAPI (Python)</li>
+            <li><strong>Frontend:</strong> HTML/CSS/JavaScript with Jinja2 Templates</li>
+            <li><strong>AI Models:</strong> Cloudflare AI Workers, OpenAI, Hugging Face</li>
+            <li><strong>Deployment:</strong> Ready for cloud deployment</li>
+        </ul>
+        
+        <h3>Features</h3>
+        <ul>
+            <li>🤖 AI Chat with Llama-3</li>
+            <li>🖼️ Image Generation with Stable Diffusion / DALL-E</li>
+            <li>🎬 Video Generation with PixVerse API</li>
+            <li>📱 App/Code Generation</li>
+            <li>🎵 Song Generation</li>
+            <li>📖 Story Generation</li>
+        </ul>
+        
+        <h3>Contact</h3>
+        <p>For questions or feedback, please reach out to us.</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Video Generation - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">Video Generation</h1>
+        <p class="page-subtitle">Create videos from text descriptions using PixVerse API</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <form id="video-form" onsubmit="event.preventDefault(); generateVideo();">
+            <div class="form-group">
+                <label class="form-label" for="prompt">Describe your video</label>
+                <textarea id="prompt" class="form-textarea" placeholder="A drone shot of waves crashing on a rocky coastline at sunset..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="aspect-ratio">Aspect Ratio</label>
+                <select id="aspect-ratio" class="form-select">
+                    <option value="16:9">16:9 (Landscape)</option>
+                    <option value="9:16">9:16 (Portrait)</option>
+                    <option value="1:1">1:1 (Square)</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Video</button>
+        </form>
+        
+        <div id="result-container" class="result-container hidden">
+            <h3 class="text-center mb-3">Generated Video</h3>
+            <div class="text-center">
+                <video id="result-video" class="result-video" controls>
+                    <source src="" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

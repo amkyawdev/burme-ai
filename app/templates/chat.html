@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Chat - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">AI Chat</h1>
+        <p class="page-subtitle">Chat with Llama-3 powered AI assistant</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="chat-container">
+        <div id="chat-messages" class="chat-messages">
+            <div class="chat-message assistant">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
+            <button onclick="sendChatMessage()" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

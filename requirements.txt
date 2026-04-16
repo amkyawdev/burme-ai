@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+aiohttp
+python-dotenv
+httpx
+markdown
+
+# AI Libraries
+openai
+diffusers
+torch
+transformers
+accelerate
+soundfile

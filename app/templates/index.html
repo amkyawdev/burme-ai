@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <h1 class="hero-title">{{ app_name }}</h1>
+        <p class="hero-subtitle">
+            AI-Powered Platform for Chat, Image Generation, Video Generation, 
+            App Generation, Song Generation, and Story Generation
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a href="/chat" class="btn btn-primary">Start Chatting</a>
+            <a href="/docs" class="btn btn-secondary">View Documentation</a>
+        </div>
+        
+        <!-- Features Grid -->
+        <div class="features-grid">
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">AI Chat</h3>
+                <p class="feature-description">Chat with Llama-3 powered AI assistant</p>
+            </div>
+            
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Image Generation</h3>
+                <p class="feature-description">Generate stunning images with Stable Diffusion</p>
+            </div>
+            
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="23 7 16 12 23 17 23 7"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Video Generation</h3>
+                <p class="feature-description">Create videos from text with PixVerse API</p>
+            </div>
+            
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">App Generator</h3>
+                <p class="feature-description">Generate code from text descriptions</p>
+            </div>
+            
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>
+                        <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Song Generation</h3>
+                <p class="feature-description">Create music with AI</p>
+            </div>
+            
+            <div class="glass-card feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Story Generation</h3>
+                <p class="feature-description">Write creative stories with AI</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

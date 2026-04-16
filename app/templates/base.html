@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ app_name }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                Burme AI
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="/" {% if request.url.path == '/' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/chat" {% if request.url.path == '/chat' %}class="active"{% endif %}>Chat</a></li>
+                <li><a href="/image-gen" {% if request.url.path == '/image-gen' %}class="active"{% endif %}>Image</a></li>
+                <li><a href="/video-gen" {% if request.url.path == '/video-gen' %}class="active"{% endif %}>Video</a></li>
+                <li><a href="/app-gen" {% if request.url.path == '/app-gen' %}class="active"{% endif %}>App</a></li>
+                <li><a href="/song-gen" {% if request.url.path == '/song-gen' %}class="active"{% endif %}>Song</a></li>
+                <li><a href="/story-gen" {% if request.url.path == '/story-gen' %}class="active"{% endif %}>Story</a></li>
+                <li><a href="/docs" {% if request.url.path == '/docs' %}class="active"{% endif %}>Docs</a></li>
+                <li><a href="/about" {% if request.url.path == '/about' %}class="active"{% endif %}>About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2024 {{ app_name }}. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="/docs">Documentation</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

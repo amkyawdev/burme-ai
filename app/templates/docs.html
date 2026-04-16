@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Documentation - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">Documentation</h1>
+        <p class="page-subtitle">Learn how to use Burme AI Platform</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+        <h2>Getting Started</h2>
+        <p>Burme AI Platform provides a comprehensive suite of AI-powered tools for various creative and development tasks.</p>
+        
+        <h3>Features</h3>
+        <ul>
+            <li><strong>AI Chat:</strong> Chat with Llama-3 powered AI assistant</li>
+            <li><strong>Image Generation:</strong> Generate images with Stable Diffusion / DALL-E</li>
+            <li><strong>Video Generation:</strong> Create videos with PixVerse API</li>
+            <li><strong>App Generator:</strong> Generate code from text descriptions</li>
+            <li><strong>Song Generation:</strong> Create music with AI</li>
+            <li><strong>Story Generation:</strong> Write creative stories</li>
+        </ul>
+        
+        <h3>API Configuration</h3>
+        <p>To use the AI features, you need to configure the following environment variables in your <code>.env</code> file:</p>
+        <pre class="result-code"># Cloudflare AI
+CLOUDFLARE_ACCOUNT_ID=your_account_id
+CLOUDFLARE_API_TOKEN=your_api_token
+
+# OpenAI
+OPENAI_API_KEY=your_openai_key
+
+# PixVerse
+PIXVERSE_API_KEY=your_pixverse_key</pre>
+        
+        <h3>Running the Application</h3>
+        <pre class="result-code"># Install dependencies
+pip install -r requirements.txt
+
+# Run the server
+uvicorn app.main:app --reload
+
+# Open browser
+http://localhost:8000</pre>
+        
+        <h3>API Endpoints</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+            <thead>
+                <tr style="background: rgba(0, 180, 216, 0.1);">
+                    <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(0, 180, 216, 0.3);">Endpoint</th>
+                    <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(0, 180, 216, 0.3);">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/chat/</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Chat with AI</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/image/generate</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Generate images</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/video/generate</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Generate videos</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/app/generate</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Generate code</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/audio/song</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Generate songs</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);"><code>POST /api/story/generate</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid rgba(0, 180, 216, 0.3);">Generate stories</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

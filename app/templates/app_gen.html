@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}App Generator - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">App Generator</h1>
+        <p class="page-subtitle">Generate code from text descriptions using Llama-3</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <form id="app-form" onsubmit="event.preventDefault(); generateApp();">
+            <div class="form-group">
+                <label class="form-label" for="description">Describe the app you want to build</label>
+                <textarea id="description" class="form-textarea" placeholder="A simple todo list app with add, delete, and mark complete features using Python and Flask..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="language">Programming Language</label>
+                <select id="language" class="form-select">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="java">Java</option>
+                    <option value="go">Go</option>
+                    <option value="rust">Rust</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Code</button>
+        </form>
+        
+        <div id="result-container" class="result-container hidden">
+            <h3 class="text-center mb-3">Generated Code</h3>
+            <pre id="result-code" class="result-code"></pre>
+        </div>
+    </div>
+</div>
+{% endblock %}

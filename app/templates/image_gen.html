@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Image Generation - {{ app_name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">Image Generation</h1>
+        <p class="page-subtitle">Generate stunning images from text descriptions</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <form id="image-form" onsubmit="event.preventDefault(); generateImage();">
+            <div class="form-group">
+                <label class="form-label" for="prompt">Describe your image</label>
+                <textarea id="prompt" class="form-textarea" placeholder="A beautiful sunset over the ocean with mountains in the background..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Image</button>
+        </form>
+        
+        <div id="result-container" class="result-container hidden">
+            <h3 class="text-center mb-3">Generated Image</h3>
+            <div class="text-center">
+                <img id="result-image" class="result-image" src="" alt="Generated Image" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
